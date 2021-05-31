@@ -57,6 +57,32 @@ namespace Draw
 			viewPort.Invalidate();
 		}
 
+		private void DrawEllipseButton_Click(object sender, EventArgs e)
+		{
+			dialogProcessor.AddRandomEllipse();
+
+			statusBar.Items[0].Text = "Последно действие: Рисуване на еллипс";
+
+			viewPort.Invalidate();
+		}
+
+		private void DrawCircleShape_Click(object sender, EventArgs e)
+		{
+			dialogProcessor.AddRandomCircle();
+
+			statusBar.Items[0].Text = "Последно действие: Рисуване на кръг";
+
+			viewPort.Invalidate();
+		}
+		private void DrawSquareShape_Click(object sender, EventArgs e)
+		{
+			dialogProcessor.AddRandomSquare();
+
+			statusBar.Items[0].Text = "Последно действие: Рисуване на квадрат";
+
+			viewPort.Invalidate();
+		}
+
 		/// <summary>
 		/// Прихващане на координатите при натискането на бутон на мишката и проверка (в обратен ред) дали не е
 		/// щракнато върху елемент. Ако е така то той се отбелязва като селектиран и започва процес на "влачене".
@@ -97,5 +123,10 @@ namespace Draw
 		{
 			dialogProcessor.IsDragging = false;
 		}
-	}
+
+/*        private void ResizeBiggerButton_Click(object sender, EventArgs e)
+        {
+
+        }*/
+    }
 }

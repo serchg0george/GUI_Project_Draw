@@ -62,7 +62,41 @@ namespace Draw
 
 			ShapeList.Add(rect);
 		}
-		
+
+		public void AddRandomEllipse()
+		{
+			Random rnd = new Random();
+			int x = rnd.Next(100, 1000);
+			int y = rnd.Next(100, 600);
+
+			EllipseShape ellipse = new EllipseShape(new Rectangle(x, y, 100, 200));
+			ellipse.FillColor = Color.White;
+
+			ShapeList.Add(ellipse);
+		}
+		public void AddRandomCircle()
+		{
+			   Random rnd = new Random();
+			int x = rnd.Next(100, 1000);
+			int y = rnd.Next(100, 600);
+
+			CircleShape circle = new CircleShape(new Rectangle(x, y, 200, 200));
+			circle.FillColor = Color.White;
+
+			ShapeList.Add(circle);
+		}
+		public void AddRandomSquare()
+		{
+			Random rnd = new Random();
+			int x = rnd.Next(100, 1000);
+			int y = rnd.Next(100, 600);
+
+			SquareShape rect = new SquareShape(new Rectangle(x, y, 200, 200));
+			rect.FillColor = Color.White;
+
+			ShapeList.Add(rect);
+		}
+
 		/// <summary>
 		/// Проверява дали дадена точка е в елемента.
 		/// Обхожда в ред обратен на визуализацията с цел намиране на

@@ -6,18 +6,18 @@ namespace Draw
 	/// <summary>
 	/// Класът правоъгълник е основен примитив, който е наследник на базовия Shape.
 	/// </summary>
-	public class RectangleShape : Shape
+	public class EllipseShape : Shape
 	{
 		#region Constructor
-		
-		public RectangleShape(RectangleF rect) : base(rect)
+
+		public EllipseShape(RectangleF rect) : base(rect)
 		{
 		}
-		
-		public RectangleShape(RectangleShape rectangle) : base(rectangle)
+
+		public EllipseShape(RectangleShape rectangle) : base(rectangle)
 		{
 		}
-		
+
 		#endregion
 
 		/// <summary>
@@ -37,27 +37,17 @@ namespace Draw
 				// Ако не е в обхващащия правоъгълник, то неможе да е в обекта и => false
 				return false;
 		}
-		
+
 		/// <summary>
 		/// Частта, визуализираща конкретния примитив.
 		/// </summary>
 		public override void DrawSelf(Graphics grfx)
 		{
 			base.DrawSelf(grfx);
-			
-			grfx.FillRectangle(new SolidBrush(FillColor),Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);
-			grfx.DrawRectangle(Pens.Black,Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);
-			
+
+			grfx.FillEllipse(new SolidBrush(FillColor), Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);
+			grfx.DrawEllipse(Pens.Black, Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);
+
 		}
-
-/*        public override void ResizeBigger(Shape shape)
-        {
-            base.ResizeBigger(shape);
-        }
-
-        public override void ResizeSmaller(Shape shape)
-        {
-            base.ResizeSmaller(shape);
-        }*/
-    }
+	}
 }

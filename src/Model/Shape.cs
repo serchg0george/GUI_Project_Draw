@@ -96,6 +96,17 @@ namespace Draw
 		{
 			// shape.Rectangle.Inflate(shape.BorderWidth, shape.BorderWidth);
 		}
-		
-	}
+/*        public virtual void ResizeBigger(Shape shape)
+        {
+            Width += 20;
+            Height += 20;
+        }
+        public virtual void ResizeSmaller(Shape shape)
+        {
+            Width -= 20;
+            Height -= 20;
+            this.ShapeWidth -= 20;
+            this.ShapeHeight -= 20;
+        }*/
+    }
 }
